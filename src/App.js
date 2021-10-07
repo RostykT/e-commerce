@@ -59,6 +59,9 @@ class App extends React.Component {
 const mapStateToProps = ({ user }) => ({
 	currentUser: user.currentUser,
 });
+
+//setCurrentUser is an Action Creator, we use argument user as payload.This function dispatch action to reducer
+//so we can delete constuctor
 const mapDispatchToProps = (dispatch) => ({
 	setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
