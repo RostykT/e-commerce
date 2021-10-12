@@ -8,6 +8,9 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import React from "react";
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/ user/user.action";
+import { selectCurrentUser } from "./redux/ user/user.selector";
+import { createStructuredSelector } from "reselect";
+import CheckoutPage from "./pages/checkout/checkout.component";
 
 class App extends React.Component {
 	unsubscribeFromAuth = null;
@@ -38,7 +41,8 @@ class App extends React.Component {
 				<Header />
 				<Switch>
 					<Route exact path="/" component={HomePage} />
-					<Route exact path="/shop" component={ShopPage} />
+					<Route path="/shop" component={ShopPage} />
+					<Route exact path="/checkout" component={CheckoutPage} />
 					<Route
 						exact
 						path="/signin"
@@ -56,8 +60,8 @@ class App extends React.Component {
 	}
 }
 
-const mapStateToProps = ({ user }) => ({
-	currentUser: user.currentUser,
+const mapStateToProps = createStructuredSelector({
+	currentUser: selectCurrentUser,
 });
 
 //setCurrentUser is an Action Creator, we use argument user as payload.This function dispatch action to reducer

@@ -4,13 +4,14 @@
 	height: 350px;
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
+	padding: 35px;
 	border: 1px solid black;
 	background-color: white;
 	top: 90px;
 	right: 40px;
 	z-index: 5;
 	border-radius: 3px;
+	/* align-items: center; */
 }
 .cart-items {
 	height: 240px;
@@ -21,4 +22,9 @@
 
 button {
 	margin-top: auto;
+}
+
+.empy-cart {
+	font-size: 20px;
+	margin: auto 20px;
 }

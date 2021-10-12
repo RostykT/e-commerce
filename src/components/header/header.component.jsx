@@ -6,6 +6,12 @@ import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
 import Cart from "../cart-dropdown/cart-dropdown.component";
+import { createStructuredSelector } from "reselect";
+import {
+	selectCartHidden,
+	selectCartItemsCount,
+} from "../../redux/cart/cart.selector";
+import { selectCurrentUser } from "../../redux/ user/user.selector";
 
 const Header = ({ currentUser, hidden }) => {
 	return (
@@ -40,8 +46,8 @@ const Header = ({ currentUser, hidden }) => {
 //now we can remove passing currentUser from App.js which pass as props into header
 //this mapStateToProps we will use anywhere, where we need props from reducer
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-	currentUser,
-	hidden,
+const mapStateToProps = createStructuredSelector({
+	currentUser: selectCurrentUser,
+	hidden: selectCartHidden,
 });
 export default connect(mapStateToProps)(Header);
