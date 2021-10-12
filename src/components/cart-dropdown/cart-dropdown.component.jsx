@@ -18,7 +18,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
 					<CartItem key={cartItem.id} item={cartItem} />
 				))
 			) : (
-				<span className="empy-cart">Your cart is empty</span>
+				<span className="empty-cart">Your cart is empty</span>
 			)}
 		</div>
 
@@ -35,9 +35,6 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
 
 const mapStateToProps = createStructuredSelector({
 	cartItems: selectCartItems,
-});
-const mapDispatchToProps = (dispatch) => ({
-	ToggleCartHidden: () => dispatch(ToggleCartHidden()),
 });
 
 export default withRouter(connect(mapStateToProps)(CartDropdown));

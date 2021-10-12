@@ -5,11 +5,11 @@
 	margin-bottom: 15px;
 	margin-top: 15px;
 }
-img {
+.cart-item img {
 	width: 30%;
 }
 
-.item-details {
+.cart-item item-details {
 	width: 70%;
 	display: flex;
 	flex-direction: column;
@@ -17,12 +17,10 @@ img {
 	justify-content: center;
 	padding: 10px 20px;
 }
-.details-wrapper {
-	display: inline;
+
+.item-details name {
+	font-size: 16px;
 }
-.item-details .name {
-	font-size: 14px;
-}
-.price {
+.item-details price {
 	font-size: 14px;
 }
