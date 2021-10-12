@@ -1,4 +1,4 @@
-.custom-button {
+.register-button {
 	min-width: 165px;
 	width: auto;
 	height: 50px;
@@ -18,7 +18,7 @@
 	border-radius: 7px;
 }
 
-.custom-button:hover {
+.register-button:hover {
 	background-color: white;
 	color: black;
 	border: 1px solid black;
@@ -31,17 +31,5 @@
 
 .google-sign-in:hover {
 	background-color: #357ae8;
-	border: none;
-}
-
-.inverted {
-	background-color: white;
-	color: black;
-	border: 1px solid black;
-}
-
-.inverted:hover {
-	background-color: black;
-	color: white;
 	border: none;
 }
