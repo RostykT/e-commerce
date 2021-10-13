@@ -11,13 +11,16 @@
 	right: 40px;
 	z-index: 5;
 }
-.cart-items {
+.cart-dropdown .empty-message {
+	font-size: 18px;
+	margin: 50px auto;
+}
+.cart-dropdown .cart-items {
 	height: 240px;
 	display: flex;
 	flex-direction: column;
 	overflow: scroll;
 }
-
-button {
+.cart-dropdown button {
 	margin-top: auto;
 }
